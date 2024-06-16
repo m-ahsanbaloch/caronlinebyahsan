@@ -44,5 +44,5 @@ function getVarient() {
     carModel.innerHTML += `<option  value=""> ${modelName}</option>`;
     console.log(modelName);
   }
-
+ 
 }
