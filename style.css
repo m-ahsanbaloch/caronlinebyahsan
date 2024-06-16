@@ -16,6 +16,13 @@ select{
     border-color: rgb(239, 239, 239);
     color: rgb(101, 101, 101) ;
 }
+select:focus{
+    border-left: 1px solid rgb(136, 136, 136);
+    border-right: 1px solid rgb(136, 136, 136) ;
+    transition: 0.4s ease-in-out;
+    border-radius: 10px 10px 0px 0px;
+    outline: none;
+}
 .navin{
     display: flex;
     justify-content: space-between;
@@ -35,7 +42,7 @@ select{
     margin: 0px !important;
    
     object-fit: contain;
-  ]
+  
  */
 
 }
