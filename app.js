@@ -1,20 +1,20 @@
 var carName = document.getElementById("carName");
 var carModel = document.getElementById("carModel");
-var civic = document.getElementById('car')
+var civic = document.getElementById("car");
 var cars = {
   honda: {
     civic: {
       varient: "Civic Vti Oriel",
       model: "2023",
       price: 4000000,
-      image : src="assets/images/logocar.png"
+      image: (src = "assets/images/logocar.png"),
     },
     fit: {
-        varient: "Fit Hybrid",
-        model: "2020",
-        price: 4000000,
-        image : src="assets/images/logocar.png"
-      },
+      varient: "Fit Hybrid",
+      model: "2020",
+      price: 4000000,
+      image: (src = "assets/images/logocar.png"),
+    },
     city: {
       varient: "City Aspire",
       model: "2022",
@@ -40,7 +40,7 @@ for (var key in cars) {
   carName.innerHTML += `<option  value="${key}"> ${key.toUpperCase()}</option>`;
 }
 function getVarient() {
-    // console.log(event.target.value)
+  // console.log(event.target.value)
   var selectedManufacture = event.target.value;
   // console.log(selectedManufacture)
   carModel.innerHTML = `<option  value=""> Varient</option>`;
@@ -53,18 +53,22 @@ function getVarient() {
     // if(carModel == modelName){
     //     console.log("abcdefgh")
     // }
-  
+    console.log(cars[selectedManufacture][modelName].model);
+    // for(var key2 in cars[selectedManufacture][modelName]){
+    //     console.log("Ssss", key2)
+    // }
+    console.log("======>", cars[key][modelName]);
   }
   //   if(modelName === "civic"){
-    //     civic.style.display = "flex"
-    //   }
+  //     civic.style.display = "flex"
+  //   }
 }
 // var prod = getVarient()
-function show(event){
-    // console.log(prod)
-console.log(event)
-return "ahsan"
+function show(event) {
+  // console.log(prod)
+  // console.log(event)
+  return "ahsan";
 }
 
-civic.style.display = "flex"
-civic.style.width = 100 + "px"
+civic.style.display = "flex";
+civic.style.width = 100 + "px";
