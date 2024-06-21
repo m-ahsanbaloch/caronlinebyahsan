@@ -26,35 +26,57 @@
     
 </head>
 <body>
-    <header class="bg-dark py-3 mb-4">
-        <div class="container">
-            <h1 class="text-light text-center">Choose Your Car</h1>
-            <div class="row justify-content-center">
-                <div class="col-md-4">
-                    <select id="manufacture" class="form-select mb-3" onchange="generate()">
-                        <option value="">Select Manufacturer</option>
-                    </select>
+    <!-- ================== COntainer ================ -->
+      <div class="container-xxl">
+        <!-- ======== Navbar ========== -->
+         <div class="navi">
+            <div class="row navback ">
+                <div class="col-12 navin">
+
+                    <!-- ================== dropdown ================ -->
+                    <div id="screen">
+                        <select onchange="getVarient(event)" name="" id="carName">
+                            <option value="">Manufacture</option>
+                  </select>
+                  <select  onchange="displayCarDetails()" name="" id="carModel">
+                    <option value="">Varient</option>
+                  </select>
                 </div>
-                <div class="col-md-4">
-                    <select id="model" class="form-select mb-3" onchange="showCarDetails()">
-                        <option value="">Select Model</option>
-                    </select>
+                <!-- ================== dropdown ================ -->
+                 <!-- =================== Heading ==================== -->
+                  <div class="heading">
+                   <img src="assets/images/logocar.png" alt="">
+                  </div>
+                 <!-- =================== Heading ==================== -->
+                 <!-- ===================== search ================= -->
+                  <div class="input">
+                    <input type="text" name="" placeholder="Search" id="input">
+                  </div>
+                 <!-- ===================== search ================= -->
                 </div>
             </div>
+         </div>
+        <!-- ======== Navbar ========== -->
+        <div class="car" id="car" style="display: none;">
+            <img src="assets/images/civic.jpg" alt="">
         </div>
-    </header>
-
-    <main class="container">
-        <div id="carDetails" class="w-100"></div>
-    <div id="allCarsContainer"></div>
-    </main>
-
-
-
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-      <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script> -->
-      <script defer src="app.js"></script>
+    <!-- ================== COntainer ================ -->
+    <!-- <div id="carDetails">
+        <h2 id="carVarient"></h2>
+        <p id="carPrice"></p>
+        <p id="carYear"></p>
+        <img id="carImage" src="" alt="Car Image" width="200">
+    </div> -->
+    <div id="carDetails"></div>
+</div>
+    <!-- ========================================================= -->
+    <!-- ========================================================= -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
 </body>
 </html>
   </body>
