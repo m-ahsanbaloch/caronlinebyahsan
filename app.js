@@ -1,6 +1,7 @@
 var carName = document.getElementById("carName");
 var carModel = document.getElementById("carModel");
 var civic = document.getElementById("car");
+var details = document.getElementById("carDetails");
 var cars = {
   honda: {
     civic: {
@@ -76,21 +77,36 @@ function getVarient() {
   }
   for (var modelName in cars[selectedManufacture]) {
     carModel.innerHTML += `<option  value=""> ${modelName.toUpperCase()}</option>`;
-    console.log(modelName);
+    // console.log(modelName);
   
-    console.log(cars[selectedManufacture][modelName].model);
+    // console.log(cars[selectedManufacture][modelName].model);
 
-    console.log("======>", cars[key][modelName]);
+    // console.log("======>", cars[selectedManufacture][modelName]);
   }
 
 }
 
 // console.log("ssssssaaa",carModel.value)
-function generate(){
-  var selectedManufacture = carName.value
-  carModel.innerHTML = `<option>  </option>`
-}
+// function generate(){
+//   var selectedManufacture = carName.value
+//   carModel.innerHTML = `<option>  </option>`
+// }
 
+function displayCarDetails(){
+for(var key in cars){
+  console.log("====>",key)
+  
+  if(carName.value === key){
+    console.log("selected car",cars[key])
+    for(var key2 in cars[key]){
+      // console.log("selected car model",cars[key][key2])
+      if(carModel.value){
+        console.log(carModel.value)
+      }
+    }
+}
+}
+}
 // function showCar(){
 //   var manufacture = carName.value
 //   var model = carModel.value
