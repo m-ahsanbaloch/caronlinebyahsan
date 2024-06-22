@@ -86,37 +86,12 @@ function getVarient() {
 
 }
 
-// console.log("ssssssaaa",carModel.value)
-// function generate(){
-//   var selectedManufacture = carName.value
-//   carModel.innerHTML = `<option>  </option>`
-// }
+
 
 function displayCarDetails(){
 for(var key in cars){
-  console.log("====>",key)
-  
-  if(carName.value === key){
-    console.log("selected car",cars[key])
-    for(var key2 in cars[key]){
-      // console.log("selected car model",cars[key][key2])
-      if(carModel.value){
-        console.log(carModel.value)
-      }
-    }
+
 }
-}
-}
-// function showCar(){
-//   var manufacture = carName.value
-//   var model = carModel.value
-//   if(manufacture && model){
-//     var car = cars[manufacture][model];
-//     if(car){
-      
-//     }
-//   }
-// }
 
 
 
