@@ -4,10 +4,7 @@ var cars = {
       varient: "Civic Vti Oriel",
       model: "2023",
       price: 4000000,
-      image: {
-        black: "assets/images/logocar.png",
-        red: "assets/images/logocar.png",
-        white: "assets/images/logocar.png",
+      image: "assets/images/logocar.png",
       },
     },
     fit: {
@@ -24,13 +21,9 @@ var cars = {
       varient: "City Aspire",
       model: "2022",
       price: 3500000,
-      image: {
-        black: "assets/images/logocar.png",
-        red: "assets/images/logocar.png",
-        white: "assets/images/logocar.png",
-      },
+      image: "assets/images/logocar.png",
     },
-  },
+
 
   toyota: {
     corolla: {
@@ -63,8 +56,9 @@ var details = document.getElementById("carDetails");
 
 for (var key in cars) {
   carName.innerHTML += `<option  value="${key}"> ${key.toUpperCase()}</option>`;
-}
-
+  var carKey = cars[key]
+  // console.log(carKey.civic.image);
+  
 function getVarient() {
   details.innerHTML = ""
   var selectedManufacture = event.target.value;
@@ -73,10 +67,11 @@ function getVarient() {
     var models = cars[selectedManufacture];
   }
   for (var modelName in cars[selectedManufacture]) {
+    // console.log(modelName);
     carModel.innerHTML += `<option  value="${modelName}"> ${modelName.toUpperCase()}</option>`;
     details.innerHTML += `
       <div class="card" style="width: 18rem;">
-                <img src="assets/images/civic.jpg" class="card-img-top" alt="...">
+                <img src="${carKey.civic.model}" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">${modelName}</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -88,9 +83,11 @@ function getVarient() {
   }
   
 }
+}
 function showDetails(event){
   details.innerHTML  = ""
   var selectedModel = event.target.value;
+  console.log(selectedModel,"hello")
   if(selectedModel){
     var selectModel = cars[selectedModel.value]
     // console.log(selectedModel)
