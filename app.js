@@ -125,7 +125,7 @@ var cars = {
   toyota: {
     corolla: {
       varient: "altis Vvti",
-      model: "2023",
+      model: "2023", 
       price: 4500000,
       image: "assets/images/toyota/Corolla.png",
     },
