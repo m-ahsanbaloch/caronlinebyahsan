@@ -142,23 +142,27 @@ var carName = document.getElementById("carName");
 var carModel = document.getElementById("carModel");
 var details = document.getElementById("carDetails");
 
-for(var showAll in cars){
-  console.log(showAll)
-  for(var main in cars[showAll]){
-    console.log(cars[showAll][main])
-    details.innerHTML += `
-    <div class="card" style="width: 15rem;">
-      <img src="${cars[showAll][main].image}" style="width:150px;" class="card-img-top" alt="${cars[showAll][main].varient}">
-      <div class="card-body">
-        <h5 class="card-title">${cars[showAll][main].varient}</h5>
-        <p class="card-text">Model: ${cars[showAll][main].model}</p>
-        <p class="card-text">Price: ${cars[showAll][main].price}</p>
-        <a href="#" class="btn btn-primary">Explore</a>
-      </div> 
-    </div>
-  `;
+function abc(event){
+  for(var showAll in cars){
+    console.log(showAll)
+    for(var main in cars[showAll]){
+      console.log(cars[showAll][main])
+      details.innerHTML += `
+      <div class="card" style="width: 15rem;">
+        <img src="${cars[showAll][main].image}" style="width:150px;" class="card-img-top" alt="${cars[showAll][main].varient}">
+        <div class="card-body">
+          <h5 class="card-title">${cars[showAll][main].varient}</h5>
+          <p class="card-text">Model: ${cars[showAll][main].model}</p>
+          <p class="card-text">Price: ${cars[showAll][main].price}</p>
+          <a href="#" class="btn btn-primary">Explore</a>
+        </div> 
+      </div>
+    `;
+    }
   }
+
 }
+// abc()
 for (var key in cars) {
   carName.innerHTML += `<option value="${key}"> ${key.toUpperCase()}</option>`;
 }
