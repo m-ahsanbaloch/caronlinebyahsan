@@ -147,8 +147,8 @@ for(var showAll in cars){
   for(var main in cars[showAll]){
     console.log(cars[showAll][main])
     details.innerHTML += `
-    <div class="card" style="width: 33rem;">
-      <img src="${cars[showAll][main].image}" class="card-img-top" alt="${cars[showAll][main].varient}">
+    <div class="card" style="width: 15rem;">
+      <img src="${cars[showAll][main].image}" style="width:150px;" class="card-img-top" alt="${cars[showAll][main].varient}">
       <div class="card-body">
         <h5 class="card-title">${cars[showAll][main].varient}</h5>
         <p class="card-text">Model: ${cars[showAll][main].model}</p>
