@@ -185,7 +185,7 @@ function showDetails(event) {
           <p class="card-text">Model: ${carDetails.model}</p>
           <p class="card-text">Price: ${carDetails.price}</p>
           <a href="#" class="btn btn-primary">Explore</a>
-        </div>
+        </div> 
       </div>
     `;
   }
