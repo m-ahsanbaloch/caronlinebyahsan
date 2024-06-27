@@ -162,7 +162,7 @@ function abc(event){
   }
 
 }
-// abc()
+abc()
 for (var key in cars) {
   carName.innerHTML += `<option value="${key}"> ${key.toUpperCase()}</option>`;
 }
