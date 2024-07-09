@@ -57,6 +57,7 @@ select:focus {
     margin: 0px auto;
     object-fit: contain;
     width: 50%;
+    height: 150px;
     /* height: 100vh; */
     /* width: 100px; */
 }

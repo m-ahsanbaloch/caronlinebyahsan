@@ -177,7 +177,7 @@ function getVarient(event) {
       var modelDetails = models[modelName];
       carModel.innerHTML += `<option value="${modelName}"> ${modelName.toUpperCase()}</option>`;
       details.innerHTML += `
-      <div class="card" style="width: 18rem;">
+      <div class="card" style="width: 20rem;">
         <img src="${
           modelDetails.image
         }" class="card-img-top" alt="${modelName}">
