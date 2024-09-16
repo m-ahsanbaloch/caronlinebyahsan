@@ -163,35 +163,62 @@ function sms(event){
   }
 
 }
-// abc()
+// sms()
 for (var key in cars) {
   carName.innerHTML += `<option value="${key}"> ${key.toUpperCase()}</option>`;
 }
 
 function getVarient(event) {
-  details.innerHTML = "";
-  var selectedManufacture = event.target.value;
-  carModel.innerHTML = `<option value="">Select Model</option>`;
-  if (selectedManufacture) {
-    var models = cars[selectedManufacture];
-    for (var modelName in models) {
-      var modelDetails = models[modelName];
-      carModel.innerHTML += `<option value="${modelName}"> ${modelName.toUpperCase()}</option>`;
-      details.innerHTML += `
-      <div class="card" style="width: 20rem;">
-        <img src="${
-          modelDetails.image
-        }" class="card-img-top" alt="${modelName}">
-        <div class="card-body">
-          <h5 class="card-title">${modelName.toUpperCase()}</h5>
-          <p class="card-text">Model: ${modelName}</p>
-          <p class="card-text">Price: ${modelDetails.price}</p>
-          <a href="#" class="btn btn-primary">Explore</a>
+  if(event.srcElement.value == "every"){
+
+    console.log("check")
+    for(var showAll in cars){
+      console.log(showAll)
+      for(var main in cars[showAll]){
+        console.log(cars[showAll][main])
+        details.innerHTML += `
+        <div class="card" style="width: 15rem;">
+          <img src="${cars[showAll][main].image}" style="width:150px;" class="card-img-top" alt="${cars[showAll][main].varient}">
+          <div class="card-body">
+            <h5 class="card-title">${cars[showAll][main].varient}</h5>
+            <p class="card-text">Model: ${cars[showAll][main].model}</p>
+            <p class="card-text">Price: ${cars[showAll][main].price}</p>
+            <a href="#" class="btn btn-primary">Explore</a>
+          </div> 
         </div>
-      </div>
-    `;
+      `;
+      }
+    }
+    console.log(event.srcElement.value)
+    
+  }
+  else{
+    details.innerHTML = "";
+
+    var selectedManufacture = event.target.value;
+    carModel.innerHTML = `<option value="">Select Model</option>`;
+    if (selectedManufacture) {
+      var models = cars[selectedManufacture];
+      for (var modelName in models) {
+        var modelDetails = models[modelName];
+        carModel.innerHTML += `<option value="${modelName}"> ${modelName.toUpperCase()}</option>`;
+        details.innerHTML += `
+        <div class="card" style="width: 20rem;">
+          <img src="${
+            modelDetails.image
+          }" class="card-img-top" alt="${modelName}">
+          <div class="card-body">
+            <h5 class="card-title">${modelName.toUpperCase()}</h5>
+            <p class="card-text">Model: ${modelName}</p>
+            <p class="card-text">Price: ${modelDetails.price}</p>
+            <a href="#" class="btn btn-primary">Explore</a>
+          </div>
+        </div>
+      `;
+      }
     }
   }
+
 }
 function showDetails(event) {
   details.innerHTML = "";
