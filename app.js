@@ -142,7 +142,8 @@ var carName = document.getElementById("carName");
 var carModel = document.getElementById("carModel");
 var details = document.getElementById("carDetails");
 
-function abc(event){
+function sms(event){
+  console.log("check")
   for(var showAll in cars){
     console.log(showAll)
     for(var main in cars[showAll]){
@@ -162,7 +163,7 @@ function abc(event){
   }
 
 }
-abc()
+// abc()
 for (var key in cars) {
   carName.innerHTML += `<option value="${key}"> ${key.toUpperCase()}</option>`;
 }
