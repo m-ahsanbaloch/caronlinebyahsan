@@ -125,7 +125,7 @@ var cars = {
   toyota: {
     corolla: {
       varient: "Corolla Altis Vvti",
-      model: "2023", 
+      model: "2023",
       price: 4500000,
       image: "assets/images/toyota/Corolla.png",
     },
@@ -142,12 +142,12 @@ var carName = document.getElementById("carName");
 var carModel = document.getElementById("carModel");
 var details = document.getElementById("carDetails");
 
-function sms(event){
-  console.log("check")
-  for(var showAll in cars){
-    console.log(showAll)
-    for(var main in cars[showAll]){
-      console.log(cars[showAll][main])
+function sms(event) {
+  console.log("check");
+  for (var showAll in cars) {
+    console.log(showAll);
+    for (var main in cars[showAll]) {
+      console.log(cars[showAll][main]);
       details.innerHTML += `
       <div class="card" style="width: 15rem;">
         <img src="${cars[showAll][main].image}" style="width:150px;" class="card-img-top" alt="${cars[showAll][main].varient}">
@@ -161,7 +161,6 @@ function sms(event){
     `;
     }
   }
-
 }
 // sms()
 for (var key in cars) {
@@ -169,13 +168,13 @@ for (var key in cars) {
 }
 
 function getVarient(event) {
-  if(event.srcElement.value == "every"){
-
-    console.log("check")
-    for(var showAll in cars){
-      console.log(showAll)
-      for(var main in cars[showAll]){
-        console.log(cars[showAll][main])
+  if (event.srcElement.value == "every") {
+    // console.log("check");
+    details.innerHTML = "";
+    for (var showAll in cars) {
+      // console.log(showAll);
+      for (var main in cars[showAll]) {
+        // console.log(cars[showAll][main]);
         details.innerHTML += `
         <div class="card" style="width: 15rem;">
           <img src="${cars[showAll][main].image}" style="width:150px;" class="card-img-top" alt="${cars[showAll][main].varient}">
@@ -189,10 +188,8 @@ function getVarient(event) {
       `;
       }
     }
-    console.log(event.srcElement.value)
-    
-  }
-  else{
+    // console.log(event.srcElement.value);
+  } else {
     details.innerHTML = "";
 
     var selectedManufacture = event.target.value;
@@ -218,7 +215,6 @@ function getVarient(event) {
       }
     }
   }
-
 }
 function showDetails(event) {
   details.innerHTML = "";
