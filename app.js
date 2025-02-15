@@ -234,7 +234,6 @@ function showDetails(event) {
       </div>
     `;
   }
-  saveDate()
 }
 
 function saveDate(){
