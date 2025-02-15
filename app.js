@@ -234,4 +234,13 @@ function showDetails(event) {
       </div>
     `;
   }
+  saveDate()
 }
+
+function saveDate(){
+  localStorage.setItem('data',details.innerHTML)
+}
+function getData(){
+  details.innerHTML =  localStorage.getItem('data');
+}
+getData()
